@@ -12,19 +12,17 @@ declare let $:any;
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
 
-  menuItems: any[] | undefined;
   public usuario!: Usuario;
 
   constructor( 
-    private sidebarService: SidebarService,
+    public sidebarService: SidebarService,
     private usuarioService: UsuarioService
    ) {
-    
+    this.usuario = usuarioService.usuario;
   }
 
   ngOnInit(): void {
-    this.menuItems = this.sidebarService.menu;
-    this.usuario = this.usuarioService.usuario;
+  
   }
 
   ngAfterViewInit(): void {

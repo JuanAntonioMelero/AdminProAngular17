@@ -60,7 +60,7 @@ export class UsuariosComponent implements OnInit, OnDestroy {
 
     this.cargarUsuarios();
   }
-
+  
   buscar( termino: string ) {
 
     if ( termino.length === 0 ) {

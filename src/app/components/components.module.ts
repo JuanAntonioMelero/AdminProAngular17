@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DonaComponent } from './dona/dona.component';
 import { FormsModule } from '@angular/forms';
 import { IncrementadorComponent } from './incrementador/incrementador.component';
+import { ModalImagenComponent } from './modal-imagen/modal-imagen.component';
 
 
 
@@ -10,13 +11,14 @@ import { IncrementadorComponent } from './incrementador/incrementador.component'
   declarations: [
     DonaComponent,
     IncrementadorComponent,
+    ModalImagenComponent,
     
 
   ],
   exports:[
     DonaComponent,
     IncrementadorComponent,
-    
+    ModalImagenComponent
 
   ],
   imports: [

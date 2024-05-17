@@ -21,6 +21,7 @@ export class UsuarioService {
 
   public auth2: any;
   public usuario!: Usuario;
+
   constructor(
     private http: HttpClient, 
     private router: Router,
@@ -33,7 +34,11 @@ export class UsuarioService {
     get uid():string {
       return this.usuario.uid || '';
     }
-
+    get role():string {
+      console.log(this.usuario.role);
+      return this.usuario.role || 'USER_ROLE';
+    
+  }
     
   get headers() {
     return {
@@ -44,9 +49,19 @@ export class UsuarioService {
   }
 
   
+  guardarLocalStorage( token: string, menu: any, role:string ) {
+
+    localStorage.setItem('token', token );
+    localStorage.setItem('menu', JSON.stringify(menu) );
+    localStorage.setItem('role', role );
+    
+
+  }
+
   logout() {
     localStorage.removeItem('token');
-              
+    localStorage.removeItem('menu');
+    localStorage.removeItem('role');
     this.auth2.signOut().then(() => {
                 
       this.ngZone.run(() => {
@@ -66,7 +81,8 @@ export class UsuarioService {
         console.log(resp);
         const { email, google, nombre, role, img = '', uid } = resp.usuario;
         this.usuario = new Usuario( nombre, email, '', img, google, role, uid );
-        localStorage.setItem('token', resp.token );
+        console.log(this.usuario.role);
+        this.guardarLocalStorage( resp.token,  resp.menu, this.usuario.role || 'USER_ROLE');
         return true;
       }),
       catchError( error => of(false) )
@@ -79,7 +95,7 @@ export class UsuarioService {
     return this.http.post(`${ base_url }/usuarios`, formData )
               .pipe(
                 tap( (resp: any) => {
-                  localStorage.setItem('token', resp.token )
+                  this.guardarLocalStorage( resp.token,resp.menu,resp.role );
                 })
               )
 
@@ -105,7 +121,7 @@ export class UsuarioService {
     return this.http.post(`${ base_url }/login`, formData )
                 .pipe(
                   tap( (resp: any) => {
-                    localStorage.setItem('token', resp.token )
+                    this.guardarLocalStorage( resp.token, resp.menu,resp.role, );
                   })
                 );
 

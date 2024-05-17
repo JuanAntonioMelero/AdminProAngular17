@@ -49,3 +49,17 @@ Login register and recover password Page
       position: absolute;
       height: 100%; }
   
+
+      p {
+        font-family: Lato;
+      }
+      
+      #root {
+        padding: 30px;
+      }
+      
+      .register-form {
+        max-width: 350px;
+        margin: auto;
+      }
+      
