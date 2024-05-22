@@ -21,7 +21,7 @@ export class UsuariosComponent implements OnInit, OnDestroy {
   public imgSubs!: Subscription;
   public desde: number = 0;
   public cargando: boolean = true;
-
+  public imgTemp: any = null;
   constructor( private usuarioService: UsuarioService,
     private busquedasService: BusquedasService,
     private modalImagenService: ModalImagenService ) { }
@@ -114,7 +114,6 @@ export class UsuariosComponent implements OnInit, OnDestroy {
         console.log(resp); 
       })
   }
-
 
   abrirModal( usuario: Usuario ) {
   

@@ -106,7 +106,7 @@ export class UsuarioService {
 
     data = {
       ...data,
-     // role: this.usuario.role
+      role: this.usuario.role || ''
     };
     
 

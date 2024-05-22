@@ -6,7 +6,6 @@ interface _MedicoUser {
     img: string;
 }
 
-
 export class Medico {
 
     constructor(

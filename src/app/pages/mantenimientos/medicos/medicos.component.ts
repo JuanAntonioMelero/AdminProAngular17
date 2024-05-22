@@ -89,5 +89,13 @@ export class MedicosComponent   implements OnInit, OnDestroy{
           this.medicos = resp;
         });
   }
+  guardarCambios( medico: Medico ) {
+
+    this.medicoService.actualizarMedico(  medico )
+        .subscribe( resp => {
+          Swal.fire( 'Actualizado', medico.nombre, 'success' );
+        });
+
+  }
 
 }

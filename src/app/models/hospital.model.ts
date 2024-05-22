@@ -4,7 +4,6 @@ interface _HospitalUser {
     img: string;
 }
 
-
 export class Hospital {
 
     constructor(

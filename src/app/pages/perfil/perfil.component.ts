@@ -40,10 +40,10 @@ actualizarPerfil() {
         const { nombre, email } = this.perfilForm.value;
         this.usuario.nombre = nombre;
         this.usuario.email = email;
-
-        console.log('ok');
+        Swal.fire('Guardado', 'Cambios fueron guardados', 'success');
+        
       }, (err) => {
-        console.log(err);
+        Swal.fire('Error', err.error.msg, 'error');
       });
 }
 

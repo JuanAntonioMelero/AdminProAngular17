@@ -70,27 +70,32 @@
                         <tbody>
                             <tr *ngFor="let medico of medicos">
                                 <td class="text-center"> 
-                                    <img [src]="medico.img"
+                                    <img [src]="medico.img! | imagen:'medicos'"
                                         [alt]="medico.nombre"
                                         class="w100 cursor"
                                         (click)="abrirModal(medico)"> 
                                 </td>
                                 <td>
-                                    {{ medico.nombre }}
+                                    <input type="text" 
+                                            class="form-control"
+                                            placeholder="Nombre del hospital"
+                                            [(ngModel)]="medico.nombre" />
+                               
                                 </td>
 
                                 <td class="text-nowrap text-center">
-                                    <a [routerLink]="['/dashboard','medico', medico._id ]" 
-                                        data-toggle="tooltip" 
-                                        data-original-title="Editar">
-                                        <i class="fa fa-pencil text-inverse m-r-10"></i> 
-                                    </a>
-                                    
+                                   
+                                    <a (click)="guardarCambios(medico)"
+                                    data-toggle="tooltip" 
+                                    class="cursor"
+                                    data-original-title="Guardar cambios"> 
+                                    <i class="mdi mdi-sd"></i> 
+                                </a>
                                     <a class="cursor"
                                         data-toggle="tooltip" 
                                         data-original-title="Borrar"
                                         (click)="borrarMedico( medico )"> 
-                                        <i class="fa fa-close text-danger"></i> 
+                                        <i class="mdi mdi-delete text-danger"></i>
                                     </a>
                                 </td>
                             </tr>

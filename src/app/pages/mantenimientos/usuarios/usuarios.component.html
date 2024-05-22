@@ -50,6 +50,7 @@
                         <tbody>
                             <tr *ngFor="let usuario of usuarios">
                                 <td class="text-center">
+                                 
                                     <img [src]="usuario.imagenUrl" 
                                             alt="Avatar de usuario"
                                             class="avatar cursor"
@@ -77,7 +78,8 @@
                                         data-original-title="Borrar"
                                         class="cursor"
                                         (click)="eliminarUsuario(usuario)">
-                                        <i class="fa fa-close text-danger"></i> 
+                                        <i class="mdi mdi-delete text-danger"></i> 
+                                        
                                     </a>
                                 </td>
                             </tr>
