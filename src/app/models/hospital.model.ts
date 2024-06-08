@@ -3,7 +3,6 @@ interface _HospitalUser {
     nombre: string;
     img: string;
 }
-
 export class Hospital {
 
     constructor(

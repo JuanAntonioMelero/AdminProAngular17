@@ -35,7 +35,7 @@ export class BusquedasService {
   }
 
   buscar( 
-      tipo: 'usuarios'|'medicos'|'hospitales',
+      tipo: 'usuarios'|'medicos'|'hospitales'|'productos',
       termino: string
     ) {
 

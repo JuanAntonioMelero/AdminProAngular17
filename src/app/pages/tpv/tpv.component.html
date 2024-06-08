@@ -1,0 +1,28 @@
+
+    
+      <div id="cabecera">
+        <app-nav-bar  (messageEvent)="receiveMessage($event)"
+                        (categoriaEvent)="receiveCategoria($event)"
+         ></app-nav-bar>  
+       
+    </div>
+
+<div id="main-wrapper">
+
+    <main class="container">
+        
+        <app-tpv-box [pedido]="pedido"></app-tpv-box>
+        <div class="container__item--content">
+           
+            <!-- Mi sistema de rutas -->
+            <app-productos 
+            (addProductosPedidoEvent)="receiveAddProductosPedido($event)"
+            [productos]="productos"></app-productos>
+        </div>
+      </main>
+   
+</div>
+
+
+
+           

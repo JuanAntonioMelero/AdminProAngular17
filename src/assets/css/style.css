@@ -996,12 +996,14 @@ File: scss
 
 .page-wrapper {
   background: #f4f6f9;
-  padding-bottom: 60px;
+  padding-bottom:60px;
   position: relative; }
 
 .container-fluid {
   padding: 25px 25px; }
-
+  .container-fluid2 {
+    padding: 20px 150px; }
+  
 .card {
   margin-bottom: 30px; }
   .card .card-subtitle {

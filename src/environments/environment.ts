@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  base_url: 'https://adminprobackendserver-production.up.railway.app/api'
+  //base_url: 'https://adminprobackendserver-production.up.railway.app/api'
+  base_url: 'http://localhost:3000/api',
+  base_url2: 'http://localhost:8080/api'
 };
 
 /*

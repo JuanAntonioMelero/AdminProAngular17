@@ -33,6 +33,7 @@ export class HospitalesComponent  implements OnInit, OnDestroy {
     ngOnInit(): void {
       this.cargarHospitales();
   
+      //refrescar la tabla con la nueva imagen elegida
       this.imgSubs = this.imgSubs = this.modalImagenService.nuevaImagen
         .pipe(delay(100))
         .subscribe( img => this.cargarHospitales() );
@@ -72,13 +73,12 @@ export class HospitalesComponent  implements OnInit, OnDestroy {
 
   }
 
-
   abrirModal(hospital: Hospital) {
 
     this.modalImagenService.abrirModal( 'hospitales', hospital._id!, hospital.img );
 
   }
-  
+
   async abrirSweetAlert() {
     const { value = '' } = await Swal.fire<string>({
       title: 'Crear hospital',

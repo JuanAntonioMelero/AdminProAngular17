@@ -1,0 +1,11 @@
+<nav class="nav ">
+    <div class="wrap">
+            <ul class="listaNav">
+                    <li *ngFor="let categoria of categorias" >
+                       
+                        <a (click)="sendCategoria(categoria.nombre)">{{categoria.nombre}}</a>
+                </li> 
+                <li><a (click)="sendMessage()">añadir mensaje en TopBox</a></li>  
+            </ul>
+        </div>
+</nav>

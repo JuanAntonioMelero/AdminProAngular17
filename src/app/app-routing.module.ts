@@ -5,12 +5,15 @@ import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component'
 
 import { AuthRoutingModule } from './auth/auth.routing';
 import { PagesRoutingModule } from './pages/pages.routing';
+import { TpvRoutingModule } from './pages/tpv.routing';
 
 const routes: Routes = [
    
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+   
     { path: '**', component: NopagefoundComponent }, 
-    
+   
+
 ];
 
 
@@ -18,7 +21,9 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     AuthRoutingModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    TpvRoutingModule
+    
   ],
   exports: [RouterModule]
 })
