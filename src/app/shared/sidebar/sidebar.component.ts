@@ -25,6 +25,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   
   }
 
+  logout() {
+    this.usuarioService.logout();
+  }
+
   ngAfterViewInit(): void {
     $('#sidebarnav').AdminMenu();   
   }

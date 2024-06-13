@@ -1,0 +1,11 @@
+<div class="right">
+<div class="categories">
+            <ul>
+                <li *ngFor="let categoria of categorias" >
+                       
+                    <a (click)="sendCategoria(categoria.nombre)">{{categoria.nombre}}</a>
+            </li> 
+           
+              </ul>
+</div>
+</div>

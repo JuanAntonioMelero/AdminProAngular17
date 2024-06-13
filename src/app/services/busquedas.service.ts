@@ -35,7 +35,7 @@ export class BusquedasService {
   }
 
   buscar( 
-      tipo: 'usuarios'|'medicos'|'hospitales',
+      tipo: 'usuarios'|'medicos'|'hospitales'|'productos',
       termino: string
     ) {
 
@@ -47,8 +47,10 @@ export class BusquedasService {
                 switch ( tipo ) {
                   case 'usuarios':
                     return this.transformarUsuarios( resp.resultados )
-                    case 'hospitales':
+                  case 'hospitales':
                       return this.transformarUsuarios( resp.resultados )
+                  case 'productos':
+                    
                   default:
                     return [];
                 }

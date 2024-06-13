@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class UsuariosComponent implements OnInit, OnDestroy {
 
-  
+
   public totalUsuarios: number = 0;
   public usuarios: Usuario[] = [];
   public usuariosTemp: Usuario[] = [];

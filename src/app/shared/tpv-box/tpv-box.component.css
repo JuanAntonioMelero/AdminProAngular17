@@ -1,0 +1,173 @@
+body {
+  color: #333;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #2980b9;
+  font-family: "Roboto", sans-serif;
+}
+
+
+.left {
+  border-radius: 5px 5px 2px #333;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+.left .order-window {
+  background: #2980b9;
+  height: 35vh;
+  overflow-y: scroll;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.left .order-window table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.left .order-window table tr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 4fr 1fr 2fr;
+  overflow-x: hidden;
+}
+ .left .order-window table tr td {
+  border: 0;
+  padding: 10px;
+}
+ .left .order-window table tr td:nth-child(3) {
+  display: grid;
+  justify-content: end;
+}
+ .left .order-window table tr td:nth-child(4) {
+  display: grid;
+  justify-content: center;
+}
+ .left .order-window table tr:nth-child(even) {
+  background-color: white;
+}
+ .left .order-window table tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+ .left .order-window table tr:first-child {
+  font-weight: bold;
+  background-color: #2980b9;
+  color: white;
+  position: sticky;
+  top: 0px;
+}
+ .left .order-total {
+  background: white;
+  height: 10vh;
+  font-size: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+ .left .buttons {
+  display: grid;
+  height: 55vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background: #d5d5d5;
+}
+ .left .buttons button {
+  background-color: #eeeeee;
+  padding: 0;
+  margin: 0.5px;
+  border: 0;
+  border-radius: 2px;
+}
+ .left .buttons :hover {
+  background-color: #d5d5d5;
+}
+ .right {
+  background-color: #2980b9;
+  position: relative;
+  z-index: 5;
+}
+ .right .categories {
+  display: flex;
+}
+ .right .categories ul {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  list-style-type: none;
+}
+ .right .categories ul li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .right .categories ul li a {
+  background: #236c9c;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  color: white;
+  text-decoration: none;
+}
+ .right .categories ul li :hover {
+  background: #2980b9;
+}
+ .right .menu-items {
+  height: 80vh;
+}
+ .right .menu-items ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 80vh;
+  overflow-y: scroll;
+}
+ .right .menu-items ul li {
+  height: 20vh;
+  background: #eeeeee;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+ .right .menu-items ul li i {
+  background: #236c9c;
+}
+ .right .menu-items ul li .item {
+  font-weight: bold;
+}
+ .right .menu-items ul li .category {
+  font-style: oblique;
+}
+ .right .menu-items ul :hover {
+  background: #d5d5d5;
+}
+ .right .payment-keys ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 10vh;
+  background: #236c9c;
+  color: white;
+}
+ .right .payment-keys ul li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ .right .payment-keys ul :hover {
+  background: #2980b9;
+}

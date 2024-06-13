@@ -1,0 +1,11 @@
+<mat-card >
+    <mat-card-header>
+        <mat-card-title> {{producto.nombre}} </mat-card-title>
+        <mat-card-subtitle> {{producto.categoria}} </mat-card-subtitle>
+      </mat-card-header> 
+
+
+
+  <!-- TODO: imagen -->
+  <img mat-card-image [src]="producto.img!  | imagen:'productos'" >
+</mat-card>

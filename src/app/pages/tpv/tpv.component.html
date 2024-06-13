@@ -1,0 +1,25 @@
+<body>
+    
+<div class="register">
+    <div class="left">
+        <app-tpv-box [productosPedido2]="productosPedido2"></app-tpv-box>
+    </div>  
+    <div class="right">
+            <app-nav-bar  (categoriaEvent)="receiveCategoria($event)"
+        ></app-nav-bar> 
+          
+        <app-productos 
+        (addProductosPedidoEvent)="receiveAddProductosPedido($event)"
+        [productos]="productos"
+        [categoria]="categoria"></app-productos>
+        
+      
+        <div class="menu-items">
+   
+        </div>
+    </div>  
+     
+</div>
+    
+
+</body>

@@ -1,0 +1,88 @@
+   .right {
+	background-color: #2980b9;
+	position: relative;
+	z-index: 5;
+  }
+   .right .categories {
+	display: flex;
+  }
+   .right .categories ul {
+	flex: 1;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	height: 10vh;
+	list-style-type: none;
+  }
+   .right .categories ul li {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+   .right .categories ul li a {
+	background: #236c9c;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10vh;
+	color: white;
+	text-decoration: none;
+  }
+   .right .categories ul li :hover {
+	background: #2980b9;
+  }
+   .right .menu-items {
+	height: 80vh;
+  }
+   .right .menu-items ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	height: 80vh;
+	overflow-y: scroll;
+  }
+   .right .menu-items ul li {
+	height: 20vh;
+	background: #eeeeee;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2px;
+  }
+   .right .menu-items ul li i {
+	background: #236c9c;
+  }
+   .right .menu-items ul li .item {
+	font-weight: bold;
+  }
+   .right .menu-items ul li .category {
+	font-style: oblique;
+  }
+   .right .menu-items ul :hover {
+	background: #d5d5d5;
+  }
+   .right .payment-keys ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	height: 10vh;
+	background: #236c9c;
+	color: white;
+  }
+   .right .payment-keys ul li {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+   .right .payment-keys ul :hover {
+	background: #2980b9;
+  }

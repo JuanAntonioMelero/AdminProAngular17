@@ -1,0 +1,170 @@
+
+.register {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.register .left {
+  border-radius: 5px 5px 2px #333;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+.register .left .order-window {
+  background: #2980b9;
+  height: 35vh;
+  overflow-y: scroll;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.register .left .order-window table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.register .left .order-window table tr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 4fr 1fr 2fr;
+  overflow-x: hidden;
+}
+.register .left .order-window table tr td {
+  border: 0;
+  padding: 10px;
+}
+.register .left .order-window table tr td:nth-child(3) {
+  display: grid;
+  justify-content: end;
+}
+.register .left .order-window table tr td:nth-child(4) {
+  display: grid;
+  justify-content: center;
+}
+.register .left .order-window table tr:nth-child(even) {
+  background-color: white;
+}
+.register .left .order-window table tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+.register .left .order-window table tr:first-child {
+  font-weight: bold;
+  background-color: #2980b9;
+  color: white;
+  position: sticky;
+  top: 0px;
+}
+.register .left .order-total {
+  background: white;
+  height: 10vh;
+  font-size: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+.register .left .buttons {
+  display: grid;
+  height: 55vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background: #d5d5d5;
+}
+.register .left .buttons button {
+  background-color: #eeeeee;
+  padding: 0;
+  margin: 0.5px;
+  border: 0;
+  border-radius: 2px;
+}
+.register .left .buttons :hover {
+  background-color: #d5d5d5;
+}
+.register .right {
+  position: relative;
+  z-index: 5;
+}
+.register .right .categories {
+  display: flex;
+}
+.register .right .categories ul {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  list-style-type: none;
+}
+.register .right .categories ul li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register .right .categories ul li a {
+  background: #236c9c;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  color: white;
+  text-decoration: none;
+}
+.register .right .categories ul li :hover {
+  background: #2980b9;
+}
+.register .right .menu-items {
+  height: 80vh;
+}
+.register .right .menu-items ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 80vh;
+  overflow-y: scroll;
+}
+.register .right .menu-items ul li {
+  height: 20vh;
+  background: #eeeeee;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+.register .right .menu-items ul li i {
+  background: #236c9c;
+}
+.register .right .menu-items ul li .item {
+  font-weight: bold;
+}
+.register .right .menu-items ul li .category {
+  font-style: oblique;
+}
+.register .right .menu-items ul :hover {
+  background: #d5d5d5;
+}
+.register .right .payment-keys ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 10vh;
+  background: #236c9c;
+  color: white;
+}
+.register .right .payment-keys ul li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.register .right .payment-keys ul :hover {
+  background: #2980b9;
+}

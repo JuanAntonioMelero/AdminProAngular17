@@ -1,0 +1,56 @@
+
+
+<div class="left">
+  <div class="order-window">
+    <table>
+      <tbody>
+        <tr>
+          <td>Unidades</td>
+          <td>Articulo</td>
+          <td>Precio</td>
+          <td>Importe</td>
+        </tr>
+        <tr *ngFor="let productos of productosPedido2">
+          <td>{{productos.unidades}}</td>
+          <td>{{productos.nombre}}</td>
+          <td>{{productos.precio}}</td>
+          <td>{{importeProducto(productos.unidades ,productos.precio)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="order-total">
+    <span>{{sumaProductos()}}€</span>
+  </div>
+  <div class="buttons">
+
+    <button>
+      <i class="fas fa-print"></i>
+      Print
+    </button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>
+      <i class="fas fa-ban"></i> 
+      Void
+    </button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button><i class="fa fa-times"></i>
+      QTY
+    </button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>
+      <i class="fas fa-sign-out-alt"></i>
+        Exit
+    </button>
+    <div></div>
+    <button>0</button>
+    <button>.00</button>
+  </div>
+</div>
+ 

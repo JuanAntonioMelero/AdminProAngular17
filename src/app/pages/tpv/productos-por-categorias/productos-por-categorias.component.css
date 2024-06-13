@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif, arial;
+  font-size: 1rem;
+  color: white;
+}
+* { 
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+
+/* Esta es una manera de hacerlo */
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  height: 90vh;
+  
+  /* Puedes limitar la anchura */
+  max-width: 1500px;
+}
+
+.container__item--sidebar {
+  background-color: #2e3438;
+  
+}
+.container__item--content {
+
+  background-color: white(247, 247, 250);
+}
+.container__item--sidebar,
+.container__item--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #cabecera {
+    color:#ff9;
+    background-color:white#000;
+    padding:10px;
+    justify-content: center;
+  }
