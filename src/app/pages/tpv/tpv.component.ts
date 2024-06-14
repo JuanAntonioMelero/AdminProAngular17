@@ -37,7 +37,8 @@ export class TpvComponent  implements OnInit, OnDestroy {
     this.productosPedido2.push({
       nombre:$event.nombre,
       precio:$event.precio,
-      unidades:1
+      unidades:1,
+      isSelected: false
     }  ) ;
     
    }

@@ -5,13 +5,17 @@
     <table>
       <tbody>
         <tr>
+          <td></td>
           <td>Unidades</td>
+          <td></td>
           <td>Articulo</td>
           <td>Precio</td>
           <td>Importe</td>
         </tr>
         <tr *ngFor="let productos of productosPedido2">
+          <td (click)="reducirUnidad(productos.nombre)" class="pointer">-</td>
           <td>{{productos.unidades}}</td>
+          <td (click)="aumentarUnidad(productos.nombre)" class="pointer">+</td>
           <td>{{productos.nombre}}</td>
           <td>{{productos.precio}}</td>
           <td>{{importeProducto(productos.unidades ,productos.precio)}}</td>
@@ -25,8 +29,10 @@
   <div class="buttons">
 
     <button>
-      <i class="fas fa-print"></i>
-      Print
+      <i class=" icon-display mdi mdi-account"
+      
+      ></i>
+      Cliente
     </button>
     <button>1</button>
     <button>2</button>

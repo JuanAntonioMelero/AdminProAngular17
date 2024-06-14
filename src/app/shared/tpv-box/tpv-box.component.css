@@ -7,7 +7,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-
 .left {
   border-radius: 5px 5px 2px #333;
   display: block;
@@ -29,22 +28,34 @@ body {
 .left .order-window table tr {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 4fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 4fr 1fr 2fr;
   overflow-x: hidden;
 }
  .left .order-window table tr td {
   border: 0;
   padding: 10px;
 }
- .left .order-window table tr td:nth-child(3) {
+.left .order-window table tr td:nth-child(1) {
   display: grid;
   justify-content: end;
 }
- .left .order-window table tr td:nth-child(4) {
+.left .order-window table tr td:nth-child(2) {
   display: grid;
   justify-content: center;
 }
- .left .order-window table tr:nth-child(even) {
+ .left .order-window table tr td:nth-child(3) {
+  display: grid;
+  justify-content: start;
+}
+ .left .order-window table tr td:nth-child(4) {
+  display: grid;
+  justify-content: start;
+}
+.left .order-window table tr td:nth-child(6) {
+  display: grid;
+  justify-content: end;
+}
+ .left .order-window table tr:nth-child(even)  {
   background-color: white;
 }
  .left .order-window table tr:nth-child(odd) {
@@ -170,4 +181,10 @@ body {
 }
  .right .payment-keys ul :hover {
   background: #2980b9;
+}
+
+.pointer {cursor: pointer;}
+
+.icon-display {
+  transform: scale(2);
 }
